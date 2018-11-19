@@ -1,9 +1,8 @@
-module segment( segment7 , in );
+module segment(output reg [6:0] segment7 , input wire in );
 //  segment7 es la salida que devuelve un numero binario de
 //  in es el numero que entra, se esoera que el numero sea un binario de 4 bits
 
-input in;
-output reg [6:0]segment7; // A , B , C , D , E , F , G 
+
 
 /*parameter low = 1'b0 , high = 1'b1 ; ESTOS VALORES SON PARA HACER EL SEGMENTADO VALOR A VALOR*/
 
@@ -41,6 +40,6 @@ begin
 
   default: segment7 = 7'b1111110 ;
 
+endcase
 end
-
 endmodule
