@@ -1,11 +1,11 @@
-module seven_segment_assignment (input wire value[0:6], input wire position, input wire x, input wire y);
+module seven_segment_assignment (input wire value[0:6], input wire position_original, input wire x, input wire y);
 	parameter init_offset_x=56, init_offset_y=208, number_offset_x=32, block_offset=8;
-	
-	always @(position)
-	if (position>2 && position<5) position<=position+1; //displacement puntos de separacion
-	else if (position>4 && position<7) position<=position+2;
-	else if (position>7) position<=position+3;
-	
+	reg position;
+	always @(value)
+	if (position_original>2 && position_original<5) position<=position_original+1; //displacement puntos de separacion
+	else if (position_original>4 && position_original<7) position<=position_original+2;
+	else if (position_original>7) position<=position_original+3;
+
 	//asignacion y de-asignacion de campos de pixeles por segmento
 	assign seg_a_1 = ((x > init_offset_X+number_offset_x*position+8) & (y >  init_offset_y) & (x < init_offset_X+number_offset_x*position+24) & (y < init_offset_y+16)) ? value[0] : 0;
    assign seg_b_1 = ((x > init_offset_X+number_offset_x*position+24) & (y >  init_offset_y+8) & (x < init_offset_X+number_offset_x*position+32) & (y < init_offset_y+24)) ? value[1] : 0;

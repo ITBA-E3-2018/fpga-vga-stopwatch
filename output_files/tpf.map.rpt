@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tpf
-Sun Nov 18 22:24:47 2018
+Mon Nov 19 18:22:27 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Nov 18 22:24:47 2018           ;
+; Analysis & Synthesis Status        ; Failed - Mon Nov 19 18:22:27 2018           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; tpf                                         ;
 ; Top-level Entity Name              ; tpf                                         ;
@@ -161,98 +161,44 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 18 22:24:36 2018
+    Info: Processing started: Mon Nov 19 18:22:15 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tpf -c tpf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file upcountto9.v
+    Info (12023): Found entity 1: upcountto9 File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/upcountto9.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file upcountto6.v
+    Info (12023): Found entity 1: upcountto6 File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/upcountto6.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file segment.v
+    Info (12023): Found entity 1: segment File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/segment.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tpf.v
-    Info (12023): Found entity 1: tpf File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 1
+    Info (12023): Found entity 1: tpf File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/tpf.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga640x480.v
-    Info (12023): Found entity 1: vga640x480 File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/vga640x480.v Line: 1
+    Info (12023): Found entity 1: vga640x480 File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/vga640x480.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file block1.bdf
     Info (12023): Found entity 1: Block1
 Info (12021): Found 1 design units, including 1 entities, in source file seven_segment_assignment.v
-    Info (12023): Found entity 1: seven_segment_assignment File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(27): created implicit net for "rst" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 27
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(36): created implicit net for "seg_a_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 36
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(37): created implicit net for "seg_b_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(38): created implicit net for "seg_c_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 38
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(39): created implicit net for "seg_d_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(40): created implicit net for "seg_e_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(41): created implicit net for "seg_f_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 41
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(42): created implicit net for "seg_g_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 42
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(43): created implicit net for "seg_a_2" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 43
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(44): created implicit net for "seg_b_2" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 44
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(45): created implicit net for "seg_c_2" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 45
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(46): created implicit net for "seg_d_2" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 46
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(47): created implicit net for "seg_e_2" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 47
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(48): created implicit net for "seg_f_2" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 48
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(49): created implicit net for "seg_g_2" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 49
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(50): created implicit net for "seg_a_3" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 50
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(51): created implicit net for "seg_b_3" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 51
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(52): created implicit net for "seg_c_3" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 52
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(53): created implicit net for "seg_d_3" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 53
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(54): created implicit net for "seg_e_3" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 54
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(55): created implicit net for "seg_f_3" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 55
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(56): created implicit net for "seg_g_3" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 56
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(57): created implicit net for "seg_a_4" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 57
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(58): created implicit net for "seg_b_4" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 58
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(59): created implicit net for "seg_c_4" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 59
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(60): created implicit net for "seg_d_4" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 60
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(61): created implicit net for "seg_e_4" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 61
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(62): created implicit net for "seg_f_4" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 62
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(63): created implicit net for "seg_g_4" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 63
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(64): created implicit net for "seg_a_5" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 64
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(65): created implicit net for "seg_b_5" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 65
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(66): created implicit net for "seg_c_5" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 66
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(67): created implicit net for "seg_d_5" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 67
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(68): created implicit net for "seg_e_5" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 68
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(69): created implicit net for "seg_f_5" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 69
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(70): created implicit net for "seg_g_5" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 70
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(71): created implicit net for "seg_a_6" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 71
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(72): created implicit net for "seg_b_6" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 72
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(73): created implicit net for "seg_c_6" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 73
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(74): created implicit net for "seg_d_6" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 74
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(75): created implicit net for "seg_e_6" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 75
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(76): created implicit net for "seg_f_6" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 76
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(77): created implicit net for "seg_g_6" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 77
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(78): created implicit net for "seg_a_7" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 78
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(79): created implicit net for "seg_b_7" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 79
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(80): created implicit net for "seg_c_7" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 80
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(81): created implicit net for "seg_d_7" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 81
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(82): created implicit net for "seg_e_7" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 82
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(83): created implicit net for "seg_f_7" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 83
-Warning (10236): Verilog HDL Implicit Net warning at tpf.v(84): created implicit net for "seg_g_7" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/tpf.v Line: 84
-Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(10): created implicit net for "seg_a_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(11): created implicit net for "seg_b_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(12): created implicit net for "seg_c_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(13): created implicit net for "seg_d_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 13
-Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(14): created implicit net for "seg_e_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 14
-Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(15): created implicit net for "seg_f_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(16): created implicit net for "seg_g_1" File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 16
-Error (10161): Verilog HDL error at seven_segment_assignment.v(1): object "value" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 1
-Error (10161): Verilog HDL error at seven_segment_assignment.v(1): object "position" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 1
-Error (10161): Verilog HDL error at seven_segment_assignment.v(1): object "x" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 1
-Error (10161): Verilog HDL error at seven_segment_assignment.v(1): object "y" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 1
-Error (10161): Verilog HDL error at seven_segment_assignment.v(4): object "position" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 4
-Error (10161): Verilog HDL error at seven_segment_assignment.v(5): object "position" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 5
-Error (10161): Verilog HDL error at seven_segment_assignment.v(6): object "position" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 6
-Error (10161): Verilog HDL error at seven_segment_assignment.v(7): object "position" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 7
-Error (10161): Verilog HDL error at seven_segment_assignment.v(10): object "x" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 10
-Error (10161): Verilog HDL error at seven_segment_assignment.v(10): object "init_offset_X" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 10
-Error (10161): Verilog HDL error at seven_segment_assignment.v(10): object "position" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 10
-Error (10161): Verilog HDL error at seven_segment_assignment.v(10): object "y" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 10
-Error (10161): Verilog HDL error at seven_segment_assignment.v(10): object "value" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 10
-Error (10161): Verilog HDL error at seven_segment_assignment.v(11): object "x" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 11
-Error (10161): Verilog HDL error at seven_segment_assignment.v(11): object "init_offset_X" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 11
-Error (10161): Verilog HDL error at seven_segment_assignment.v(11): object "position" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 11
-Error (10161): Verilog HDL error at seven_segment_assignment.v(11): object "y" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 11
-Error (10161): Verilog HDL error at seven_segment_assignment.v(11): object "value" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 11
-Error (10161): Verilog HDL error at seven_segment_assignment.v(12): object "x" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Desktop/tp final electro 3/tp final e3/seven_segment_assignment.v Line: 12
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 19 errors, 58 warnings
-    Error: Peak virtual memory: 4724 megabytes
-    Error: Processing ended: Sun Nov 18 22:24:47 2018
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:22
+    Info (12023): Found entity 1: seven_segment_assignment File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at tpf.v(27): created implicit net for "rst" File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/tpf.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(10): created implicit net for "seg_a_1" File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(11): created implicit net for "seg_b_1" File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(12): created implicit net for "seg_c_1" File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(13): created implicit net for "seg_d_1" File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(14): created implicit net for "seg_e_1" File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(15): created implicit net for "seg_f_1" File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at seven_segment_assignment.v(16): created implicit net for "seg_g_1" File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 16
+Error (10773): Verilog HDL error at seven_segment_assignment.v(1): declaring module ports or function arguments with unpacked array types requires SystemVerilog extensions File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 1
+Error (10161): Verilog HDL error at seven_segment_assignment.v(10): object "init_offset_X" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 10
+Error (10161): Verilog HDL error at seven_segment_assignment.v(11): object "init_offset_X" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 11
+Error (10161): Verilog HDL error at seven_segment_assignment.v(12): object "init_offset_X" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 12
+Error (10161): Verilog HDL error at seven_segment_assignment.v(13): object "init_offset_X" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 13
+Error (10161): Verilog HDL error at seven_segment_assignment.v(14): object "init_offset_X" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 14
+Error (10161): Verilog HDL error at seven_segment_assignment.v(15): object "init_offset_X" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 15
+Error (10161): Verilog HDL error at seven_segment_assignment.v(16): object "init_offset_X" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Matías/Documents/tp3electro/tpf-team-4/seven_segment_assignment.v Line: 16
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 8 errors, 9 warnings
+    Error: Peak virtual memory: 4722 megabytes
+    Error: Processing ended: Mon Nov 19 18:22:27 2018
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:24
 
 
