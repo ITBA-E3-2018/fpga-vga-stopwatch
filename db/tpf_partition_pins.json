@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "VGA_HS_O",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS_O",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
