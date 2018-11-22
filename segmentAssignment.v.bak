@@ -1,0 +1,16 @@
+module segmentAssignment (
+input wire [9:0] x,
+input wire [8:0] y,
+input reg position,
+input wire [6:0] sevenSegmentNumber,
+output wire [6:0] segBits
+)
+	 assign segBits[6] = ((x > init_offset_x+number_offset_x*position+8) & (y >  init_offset_y) & (x < init_offset_x+number_offset_x*position+24) & (y < init_offset_y+8)) ? sevenSegmentNumber[6] : 0;
+    assign segBits[5] = ((x > init_offset_x+number_offset_x*position+24) & (y >  init_offset_y+8) & (x < init_offset_x+number_offset_x*position+32) & (y < init_offset_y+24)) ? sevenSegmentNumber[5] : 0;
+    assign segBits[4] = ((x > init_offset_x+number_offset_x*position+24) & (y >  init_offset_y+32) & (x < init_offset_x+number_offset_x*position+32) & (y < init_offset_y+48)) ? sevenSegmentNumber[4] : 0;
+    assign segBits[3] = ((x > init_offset_x+number_offset_x*position+8) & (y >  init_offset_y+48) & (x < init_offset_x+number_offset_x*position+24) & (y < init_offset_y+56)) ? sevenSegmentNumber[3] : 0;
+	 assign segBits[2] = ((x > init_offset_x+number_offset_x*position) & (y >  init_offset_y+32) & (x < init_offset_x+number_offset_x*position+8) & (y < init_offset_y+48)) ? sevenSegmentNumber[2] : 0;
+    assign segBits[1] = ((x > init_offset_x+number_offset_x*position) & (y >  init_offset_y+8) & (x < init_offset_x+number_offset_x*position+8) & (y < init_offset_y+24)) ? sevenSegmentNumber[1] : 0;
+    assign segBits[0] = ((x > init_offset_x+number_offset_x*position+8) & (y >  init_offset_y+24) & (x < init_offset_x+number_offset_x*position+24) & (y < init_offset_y+32)) ? sevenSegmentNumber[0] : 0;
+
+endmodule

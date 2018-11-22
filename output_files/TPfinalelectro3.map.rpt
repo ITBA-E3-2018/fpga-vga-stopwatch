@@ -1,0 +1,1097 @@
+Analysis & Synthesis report for TPfinalelectro3
+Wed Nov 21 16:20:54 2018
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |tpf
+ 13. Parameter Settings for User Entity Instance: fsm_boton:inst8
+ 14. Parameter Settings for User Entity Instance: fsm_boton:inst7
+ 15. Parameter Settings for User Entity Instance: fsm_enable:inst6
+ 16. Parameter Settings for User Entity Instance: bin_to_segments:inst1
+ 17. Parameter Settings for User Entity Instance: bin_to_segments:inst2
+ 18. Parameter Settings for User Entity Instance: bin_to_segments:inst3
+ 19. Parameter Settings for User Entity Instance: bin_to_segments:inst4
+ 20. Parameter Settings for User Entity Instance: bin_to_segments:inst5
+ 21. Port Connectivity Checks: "segmentAssignment:secondsinst"
+ 22. Port Connectivity Checks: "segmentAssignment:secondsdecinst"
+ 23. Port Connectivity Checks: "segmentAssignment:minutesinst"
+ 24. Port Connectivity Checks: "segmentAssignment:minutesdecinst"
+ 25. Port Connectivity Checks: "segmentAssignment:hoursinst"
+ 26. Port Connectivity Checks: "bin_to_segments:inst5"
+ 27. Port Connectivity Checks: "bin_to_segments:inst4"
+ 28. Port Connectivity Checks: "bin_to_segments:inst3"
+ 29. Port Connectivity Checks: "bin_to_segments:inst2"
+ 30. Port Connectivity Checks: "bin_to_segments:inst1"
+ 31. Port Connectivity Checks: "cronometro:inst0|upcountto9:upcountto6_h"
+ 32. Port Connectivity Checks: "cronometro:inst0"
+ 33. Port Connectivity Checks: "vga_display:displayinst"
+ 34. Port Connectivity Checks: "clockdivider:meter_clockinst"
+ 35. Port Connectivity Checks: "clockdivider:vga_clockinst"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
+ 39. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 21 16:20:54 2018       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; TPfinalelectro3                             ;
+; Top-level Entity Name              ; tpf                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 371                                         ;
+;     Total combinational functions  ; 371                                         ;
+;     Dedicated logic registers      ; 113                                         ;
+; Total registers                    ; 113                                         ;
+; Total pins                         ; 20                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                            ; tpf                ; TPfinalelectro3    ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+; cronometro_all.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v    ;         ;
+; bin_to_segments.v                ; yes             ; User Verilog HDL File  ; C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v   ;         ;
+; fsm_enable.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/fsm_enable.v        ;         ;
+; vga640x480.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/vga640x480.v        ;         ;
+; tpf.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v               ;         ;
+; fsm_boton.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/fsm_boton.v         ;         ;
+; segmentAssignment.v              ; yes             ; User Verilog HDL File  ; C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/segmentAssignment.v ;         ;
+; clockdivider.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/clockdivider.v      ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 371       ;
+;                                             ;           ;
+; Total combinational functions               ; 371       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 189       ;
+;     -- 3 input functions                    ; 60        ;
+;     -- <=2 input functions                  ; 122       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 291       ;
+;     -- arithmetic mode                      ; 80        ;
+;                                             ;           ;
+; Total registers                             ; 113       ;
+;     -- Dedicated logic registers            ; 113       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 20        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 91        ;
+; Total fan-out                               ; 1465      ;
+; Average fan-out                             ; 2.80      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Entity Name       ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
+; |tpf                                  ; 371 (85)            ; 113 (0)                   ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |tpf                                           ; tpf               ; work         ;
+;    |bin_to_segments:inst1|            ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|bin_to_segments:inst1                     ; bin_to_segments   ; work         ;
+;    |bin_to_segments:inst2|            ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|bin_to_segments:inst2                     ; bin_to_segments   ; work         ;
+;    |bin_to_segments:inst3|            ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|bin_to_segments:inst3                     ; bin_to_segments   ; work         ;
+;    |bin_to_segments:inst5|            ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|bin_to_segments:inst5                     ; bin_to_segments   ; work         ;
+;    |clockdivider:meter_clockinst|     ; 57 (57)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|clockdivider:meter_clockinst              ; clockdivider      ; work         ;
+;    |clockdivider:vga_clockinst|       ; 46 (46)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|clockdivider:vga_clockinst                ; clockdivider      ; work         ;
+;    |cronometro:inst0|                 ; 40 (0)              ; 22 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|cronometro:inst0                          ; cronometro        ; work         ;
+;       |upcountto6:upcountto6_m1|      ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|cronometro:inst0|upcountto6:upcountto6_m1 ; upcountto6        ; work         ;
+;       |upcountto6:upcountto6_s1|      ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|cronometro:inst0|upcountto6:upcountto6_s1 ; upcountto6        ; work         ;
+;       |upcountto9:upcountto6_h|       ; 10 (10)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|cronometro:inst0|upcountto9:upcountto6_h  ; upcountto9        ; work         ;
+;       |upcountto9:upcountto9_m0|      ; 10 (10)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|cronometro:inst0|upcountto9:upcountto9_m0 ; upcountto9        ; work         ;
+;       |upcountto9:upcountto9_s0|      ; 10 (10)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|cronometro:inst0|upcountto9:upcountto9_s0 ; upcountto9        ; work         ;
+;    |fsm_boton:inst7|                  ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|fsm_boton:inst7                           ; fsm_boton         ; work         ;
+;    |fsm_boton:inst8|                  ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|fsm_boton:inst8                           ; fsm_boton         ; work         ;
+;    |fsm_enable:inst6|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|fsm_enable:inst6                          ; fsm_enable        ; work         ;
+;    |segmentAssignment:hoursinst|      ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|segmentAssignment:hoursinst               ; segmentAssignment ; work         ;
+;    |segmentAssignment:minutesdecinst| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|segmentAssignment:minutesdecinst          ; segmentAssignment ; work         ;
+;    |segmentAssignment:minutesinst|    ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|segmentAssignment:minutesinst             ; segmentAssignment ; work         ;
+;    |segmentAssignment:secondsdecinst| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|segmentAssignment:secondsdecinst          ; segmentAssignment ; work         ;
+;    |segmentAssignment:secondsinst|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|segmentAssignment:secondsinst             ; segmentAssignment ; work         ;
+;    |vga_display:displayinst|          ; 49 (49)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tpf|vga_display:displayinst                   ; vga_display       ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                       ;
++-----------------------------------------------------+----------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal        ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------------+------------------------+
+; bin_to_segments:inst5|segments[6]                   ; bin_to_segments:inst5|Mux7 ; yes                    ;
+; bin_to_segments:inst5|segments[5]                   ; bin_to_segments:inst5|Mux7 ; yes                    ;
+; bin_to_segments:inst5|segments[4]                   ; bin_to_segments:inst5|Mux7 ; yes                    ;
+; bin_to_segments:inst5|segments[3]                   ; bin_to_segments:inst5|Mux7 ; yes                    ;
+; bin_to_segments:inst5|segments[2]                   ; bin_to_segments:inst5|Mux7 ; yes                    ;
+; bin_to_segments:inst5|segments[1]                   ; bin_to_segments:inst5|Mux7 ; yes                    ;
+; bin_to_segments:inst5|segments[0]                   ; bin_to_segments:inst5|Mux7 ; yes                    ;
+; bin_to_segments:inst4|segments[6]                   ; bin_to_segments:inst4|Mux7 ; yes                    ;
+; bin_to_segments:inst4|segments[5]                   ; bin_to_segments:inst4|Mux7 ; yes                    ;
+; bin_to_segments:inst4|segments[4]                   ; bin_to_segments:inst4|Mux7 ; yes                    ;
+; bin_to_segments:inst4|segments[3]                   ; bin_to_segments:inst4|Mux7 ; yes                    ;
+; bin_to_segments:inst4|segments[2]                   ; bin_to_segments:inst4|Mux7 ; yes                    ;
+; bin_to_segments:inst4|segments[1]                   ; bin_to_segments:inst4|Mux7 ; yes                    ;
+; bin_to_segments:inst4|segments[0]                   ; bin_to_segments:inst4|Mux7 ; yes                    ;
+; bin_to_segments:inst3|segments[6]                   ; bin_to_segments:inst3|Mux7 ; yes                    ;
+; bin_to_segments:inst3|segments[5]                   ; bin_to_segments:inst3|Mux7 ; yes                    ;
+; bin_to_segments:inst3|segments[4]                   ; bin_to_segments:inst3|Mux7 ; yes                    ;
+; bin_to_segments:inst3|segments[3]                   ; bin_to_segments:inst3|Mux7 ; yes                    ;
+; bin_to_segments:inst3|segments[2]                   ; bin_to_segments:inst3|Mux7 ; yes                    ;
+; bin_to_segments:inst3|segments[1]                   ; bin_to_segments:inst3|Mux7 ; yes                    ;
+; bin_to_segments:inst3|segments[0]                   ; bin_to_segments:inst3|Mux7 ; yes                    ;
+; bin_to_segments:inst2|segments[6]                   ; bin_to_segments:inst2|Mux7 ; yes                    ;
+; bin_to_segments:inst2|segments[5]                   ; bin_to_segments:inst2|Mux7 ; yes                    ;
+; bin_to_segments:inst2|segments[4]                   ; bin_to_segments:inst2|Mux7 ; yes                    ;
+; bin_to_segments:inst2|segments[3]                   ; bin_to_segments:inst2|Mux7 ; yes                    ;
+; bin_to_segments:inst2|segments[2]                   ; bin_to_segments:inst2|Mux7 ; yes                    ;
+; bin_to_segments:inst2|segments[1]                   ; bin_to_segments:inst2|Mux7 ; yes                    ;
+; bin_to_segments:inst2|segments[0]                   ; bin_to_segments:inst2|Mux7 ; yes                    ;
+; bin_to_segments:inst1|segments[6]                   ; bin_to_segments:inst1|Mux7 ; yes                    ;
+; bin_to_segments:inst1|segments[5]                   ; bin_to_segments:inst1|Mux7 ; yes                    ;
+; bin_to_segments:inst1|segments[4]                   ; bin_to_segments:inst1|Mux7 ; yes                    ;
+; bin_to_segments:inst1|segments[3]                   ; bin_to_segments:inst1|Mux7 ; yes                    ;
+; bin_to_segments:inst1|segments[2]                   ; bin_to_segments:inst1|Mux7 ; yes                    ;
+; bin_to_segments:inst1|segments[1]                   ; bin_to_segments:inst1|Mux7 ; yes                    ;
+; bin_to_segments:inst1|segments[0]                   ; bin_to_segments:inst1|Mux7 ; yes                    ;
+; Number of user-specified and inferred latches = 35  ;                            ;                        ;
++-----------------------------------------------------+----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                              ;
++-----------------------------------------------------+-------------------------------------------+
+; Register name                                       ; Reason for Removal                        ;
++-----------------------------------------------------+-------------------------------------------+
+; fsm_enable:inst6|state                              ; Merged with fsm_enable:inst6|enable_count ;
+; cronometro:inst0|upcountto6:upcountto6_m1|Salida[3] ; Stuck at GND due to stuck port data_in    ;
+; cronometro:inst0|upcountto6:upcountto6_s1|Salida[3] ; Stuck at GND due to stuck port data_in    ;
+; Total Number of Removed Registers = 3               ;                                           ;
++-----------------------------------------------------+-------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 113   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 18    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tpf|vga_display:displayinst|v_count[6]                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tpf|cronometro:inst0|upcountto9:upcountto6_h|Salida[1]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tpf|cronometro:inst0|upcountto6:upcountto6_m1|Salida[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tpf|cronometro:inst0|upcountto9:upcountto9_m0|Salida[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tpf|cronometro:inst0|upcountto6:upcountto6_s1|Salida[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tpf|cronometro:inst0|upcountto9:upcountto9_s0|Salida[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |tpf ;
++-----------------+-------+-------------------------------------------+
+; Parameter Name  ; Value ; Type                                      ;
++-----------------+-------+-------------------------------------------+
+; init_offset_x   ; 188   ; Signed Integer                            ;
+; init_offset_y   ; 236   ; Signed Integer                            ;
+; number_blocks_x ; 4     ; Signed Integer                            ;
+; block_offset    ; 8     ; Signed Integer                            ;
++-----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fsm_boton:inst8 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; IDLE           ; 0     ; Unsigned Binary                     ;
+; PRESSED        ; 1     ; Unsigned Binary                     ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fsm_boton:inst7 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; IDLE           ; 0     ; Unsigned Binary                     ;
+; PRESSED        ; 1     ; Unsigned Binary                     ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fsm_enable:inst6 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; COUNT          ; 1     ; Unsigned Binary                      ;
+; NO_COUNT       ; 0     ; Unsigned Binary                      ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_to_segments:inst1 ;
++----------------+---------+-----------------------------------------+
+; Parameter Name ; Value   ; Type                                    ;
++----------------+---------+-----------------------------------------+
+; CERO           ; 1111110 ; Unsigned Binary                         ;
+; UNO            ; 0110000 ; Unsigned Binary                         ;
+; DOS            ; 1101101 ; Unsigned Binary                         ;
+; TRES           ; 1111001 ; Unsigned Binary                         ;
+; CUATRO         ; 0110011 ; Unsigned Binary                         ;
+; CINCO          ; 1011011 ; Unsigned Binary                         ;
+; SEIS           ; 1011111 ; Unsigned Binary                         ;
+; SIETE          ; 1110000 ; Unsigned Binary                         ;
+; OCHO           ; 1111111 ; Unsigned Binary                         ;
+; NUEVE          ; 1111011 ; Unsigned Binary                         ;
++----------------+---------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_to_segments:inst2 ;
++----------------+---------+-----------------------------------------+
+; Parameter Name ; Value   ; Type                                    ;
++----------------+---------+-----------------------------------------+
+; CERO           ; 1111110 ; Unsigned Binary                         ;
+; UNO            ; 0110000 ; Unsigned Binary                         ;
+; DOS            ; 1101101 ; Unsigned Binary                         ;
+; TRES           ; 1111001 ; Unsigned Binary                         ;
+; CUATRO         ; 0110011 ; Unsigned Binary                         ;
+; CINCO          ; 1011011 ; Unsigned Binary                         ;
+; SEIS           ; 1011111 ; Unsigned Binary                         ;
+; SIETE          ; 1110000 ; Unsigned Binary                         ;
+; OCHO           ; 1111111 ; Unsigned Binary                         ;
+; NUEVE          ; 1111011 ; Unsigned Binary                         ;
++----------------+---------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_to_segments:inst3 ;
++----------------+---------+-----------------------------------------+
+; Parameter Name ; Value   ; Type                                    ;
++----------------+---------+-----------------------------------------+
+; CERO           ; 1111110 ; Unsigned Binary                         ;
+; UNO            ; 0110000 ; Unsigned Binary                         ;
+; DOS            ; 1101101 ; Unsigned Binary                         ;
+; TRES           ; 1111001 ; Unsigned Binary                         ;
+; CUATRO         ; 0110011 ; Unsigned Binary                         ;
+; CINCO          ; 1011011 ; Unsigned Binary                         ;
+; SEIS           ; 1011111 ; Unsigned Binary                         ;
+; SIETE          ; 1110000 ; Unsigned Binary                         ;
+; OCHO           ; 1111111 ; Unsigned Binary                         ;
+; NUEVE          ; 1111011 ; Unsigned Binary                         ;
++----------------+---------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_to_segments:inst4 ;
++----------------+---------+-----------------------------------------+
+; Parameter Name ; Value   ; Type                                    ;
++----------------+---------+-----------------------------------------+
+; CERO           ; 1111110 ; Unsigned Binary                         ;
+; UNO            ; 0110000 ; Unsigned Binary                         ;
+; DOS            ; 1101101 ; Unsigned Binary                         ;
+; TRES           ; 1111001 ; Unsigned Binary                         ;
+; CUATRO         ; 0110011 ; Unsigned Binary                         ;
+; CINCO          ; 1011011 ; Unsigned Binary                         ;
+; SEIS           ; 1011111 ; Unsigned Binary                         ;
+; SIETE          ; 1110000 ; Unsigned Binary                         ;
+; OCHO           ; 1111111 ; Unsigned Binary                         ;
+; NUEVE          ; 1111011 ; Unsigned Binary                         ;
++----------------+---------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin_to_segments:inst5 ;
++----------------+---------+-----------------------------------------+
+; Parameter Name ; Value   ; Type                                    ;
++----------------+---------+-----------------------------------------+
+; CERO           ; 1111110 ; Unsigned Binary                         ;
+; UNO            ; 0110000 ; Unsigned Binary                         ;
+; DOS            ; 1101101 ; Unsigned Binary                         ;
+; TRES           ; 1111001 ; Unsigned Binary                         ;
+; CUATRO         ; 0110011 ; Unsigned Binary                         ;
+; CINCO          ; 1011011 ; Unsigned Binary                         ;
+; SEIS           ; 1011111 ; Unsigned Binary                         ;
+; SIETE          ; 1110000 ; Unsigned Binary                         ;
+; OCHO           ; 1111111 ; Unsigned Binary                         ;
+; NUEVE          ; 1111011 ; Unsigned Binary                         ;
++----------------+---------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "segmentAssignment:secondsinst"                                                                                                                                                                       ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                   ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; position               ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "position[3..3]" will be connected to GND.                                    ;
+; position               ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; init_offset_x[5..2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x[15..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x[1..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x[7]       ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x[6]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; init_offset_y[7..5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_y[3..2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_y[15..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y[1..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y[4]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; number_blocks_x[15..3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x[2]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; block_offset           ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; block_offset[15..4]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; block_offset[2..0]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; block_offset[3]        ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "segmentAssignment:secondsdecinst"                                                                                                                                                                    ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                   ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; position               ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "position[3..3]" will be connected to GND.                                    ;
+; position[2..1]         ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; position[1]            ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; init_offset_x[5..2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x[15..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x[1..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x[7]       ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x[6]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; init_offset_y[7..5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_y[3..2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_y[15..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y[1..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y[4]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; number_blocks_x[15..3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x[2]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; block_offset           ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; block_offset[15..4]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; block_offset[2..0]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; block_offset[3]        ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "segmentAssignment:minutesinst"                                                                                                                                                                       ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                   ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; position               ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "position[3..3]" will be connected to GND.                                    ;
+; position[1..0]         ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; position[3]            ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; init_offset_x[5..2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x[15..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x[1..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x[7]       ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x[6]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; init_offset_y[7..5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_y[3..2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_y[15..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y[1..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y[4]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; number_blocks_x[15..3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x[2]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; block_offset           ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; block_offset[15..4]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; block_offset[2..0]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; block_offset[3]        ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "segmentAssignment:minutesdecinst"                                                                                                                                                                    ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                   ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; position               ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "position[3..3]" will be connected to GND.                                    ;
+; position[1..0]         ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; position[3]            ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; init_offset_x[5..2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x[15..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x[1..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x[7]       ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x[6]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; init_offset_y[7..5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_y[3..2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_y[15..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y[1..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y[4]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; number_blocks_x[15..3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x[2]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; block_offset           ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; block_offset[15..4]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; block_offset[2..0]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; block_offset[3]        ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "segmentAssignment:hoursinst"                                                                                                                                                                         ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                   ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; position               ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "position[3..3]" will be connected to GND.                                    ;
+; position[2..1]         ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; position[1]            ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; init_offset_x[5..2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x[15..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x[1..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_x[7]       ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_x[6]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; init_offset_y[7..5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_y[3..2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; init_offset_y[15..8]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y[1..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; init_offset_y[4]       ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; number_blocks_x[15..3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; number_blocks_x[2]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; block_offset           ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; block_offset[15..4]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; block_offset[2..0]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; block_offset[3]        ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_to_segments:inst5"                                                                                                                                                           ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_to_segments:inst4"                                                                                                                                                           ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_to_segments:inst3"                                                                                                                                                           ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_to_segments:inst2"                                                                                                                                                           ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_to_segments:inst1"                                                                                                                                                           ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; digit ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cronometro:inst0|upcountto9:upcountto6_h"                                            ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; carry ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cronometro:inst0"                                                                                                                                                     ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; s0   ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (7 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
+; s1   ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (7 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
+; m0   ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (7 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
+; m1   ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (7 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
+; h    ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (7 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga_display:displayinst"                                                                                                                                                             ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rst     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rst[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "clockdivider:meter_clockinst" ;
++-----------------+-------+----------+---------------------+
+; Port            ; Type  ; Severity ; Details             ;
++-----------------+-------+----------+---------------------+
+; divider[22..18] ; Input ; Info     ; Stuck at VCC        ;
+; divider[14..11] ; Input ; Info     ; Stuck at VCC        ;
+; divider[31..25] ; Input ; Info     ; Stuck at GND        ;
+; divider[10..7]  ; Input ; Info     ; Stuck at GND        ;
+; divider[5..0]   ; Input ; Info     ; Stuck at GND        ;
+; divider[24]     ; Input ; Info     ; Stuck at VCC        ;
+; divider[23]     ; Input ; Info     ; Stuck at GND        ;
+; divider[17]     ; Input ; Info     ; Stuck at GND        ;
+; divider[16]     ; Input ; Info     ; Stuck at VCC        ;
+; divider[15]     ; Input ; Info     ; Stuck at GND        ;
+; divider[6]      ; Input ; Info     ; Stuck at VCC        ;
++-----------------+-------+----------+---------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "clockdivider:vga_clockinst" ;
++----------------+-------+----------+--------------------+
+; Port           ; Type  ; Severity ; Details            ;
++----------------+-------+----------+--------------------+
+; divider[31..2] ; Input ; Info     ; Stuck at GND       ;
+; divider[1]     ; Input ; Info     ; Stuck at VCC       ;
+; divider[0]     ; Input ; Info     ; Stuck at GND       ;
++----------------+-------+----------+--------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 20                          ;
+; cycloneiii_ff         ; 113                         ;
+;     CLR               ; 18                          ;
+;     ENA               ; 20                          ;
+;     plain             ; 75                          ;
+; cycloneiii_lcell_comb ; 372                         ;
+;     arith             ; 80                          ;
+;         2 data inputs ; 80                          ;
+;     normal            ; 292                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 60                          ;
+;         4 data inputs ; 189                         ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 4.40                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Nov 21 16:20:33 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TPfinalelectro3 -c TPfinalelectro3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 3 design units, including 3 entities, in source file cronometro_all.v
+    Info (12023): Found entity 1: cronometro File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 1
+    Info (12023): Found entity 2: upcountto9 File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 16
+    Info (12023): Found entity 3: upcountto6 File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file bin_to_segments.v
+    Info (12023): Found entity 1: bin_to_segments File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_enable.v
+    Info (12023): Found entity 1: fsm_enable File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/fsm_enable.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga640x480.v
+    Info (12023): Found entity 1: vga_display File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/vga640x480.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at tpf.v(174): ignored dangling comma in List of Port Connections File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 174
+Warning (10275): Verilog HDL Module Instantiation warning at tpf.v(187): ignored dangling comma in List of Port Connections File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 187
+Warning (10275): Verilog HDL Module Instantiation warning at tpf.v(200): ignored dangling comma in List of Port Connections File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 200
+Warning (10275): Verilog HDL Module Instantiation warning at tpf.v(213): ignored dangling comma in List of Port Connections File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 213
+Warning (10275): Verilog HDL Module Instantiation warning at tpf.v(226): ignored dangling comma in List of Port Connections File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 226
+Info (12021): Found 1 design units, including 1 entities, in source file tpf.v
+    Info (12023): Found entity 1: tpf File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_boton.v
+    Info (12023): Found entity 1: fsm_boton File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/fsm_boton.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file segmentassignment.v
+    Info (12023): Found entity 1: segmentAssignment File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/segmentAssignment.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file clockdivider.v
+    Info (12023): Found entity 1: clockdivider File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/clockdivider.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at cronometro_all.v(10): created implicit net for "cm0" File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 10
+Info (12127): Elaborating entity "tpf" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at tpf.v(230): truncated value with size 32 to match size of target (16) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 230
+Warning (10230): Verilog HDL assignment warning at tpf.v(232): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 232
+Warning (10230): Verilog HDL assignment warning at tpf.v(233): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 233
+Warning (10230): Verilog HDL assignment warning at tpf.v(234): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 234
+Warning (10230): Verilog HDL assignment warning at tpf.v(235): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 235
+Warning (10034): Output port "VGA_Ro[3]" at tpf.v(7) has no driver File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 7
+Warning (10034): Output port "VGA_Ro[1..0]" at tpf.v(7) has no driver File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 7
+Warning (10034): Output port "VGA_Go[2..0]" at tpf.v(8) has no driver File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 8
+Warning (10034): Output port "VGA_Bo[3..0]" at tpf.v(10) has no driver File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 10
+Info (12128): Elaborating entity "clockdivider" for hierarchy "clockdivider:vga_clockinst" File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 27
+Info (12128): Elaborating entity "vga_display" for hierarchy "vga_display:displayinst" File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 53
+Warning (10230): Verilog HDL assignment warning at vga640x480.v(32): truncated value with size 32 to match size of target (10) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/vga640x480.v Line: 32
+Warning (10230): Verilog HDL assignment warning at vga640x480.v(33): truncated value with size 32 to match size of target (9) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/vga640x480.v Line: 33
+Warning (10230): Verilog HDL assignment warning at vga640x480.v(50): truncated value with size 32 to match size of target (10) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/vga640x480.v Line: 50
+Warning (10230): Verilog HDL assignment warning at vga640x480.v(53): truncated value with size 32 to match size of target (10) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/vga640x480.v Line: 53
+Info (12128): Elaborating entity "fsm_boton" for hierarchy "fsm_boton:inst8" File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 72
+Info (12128): Elaborating entity "fsm_enable" for hierarchy "fsm_enable:inst6" File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 85
+Info (12128): Elaborating entity "cronometro" for hierarchy "cronometro:inst0" File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 108
+Info (12128): Elaborating entity "upcountto9" for hierarchy "cronometro:inst0|upcountto9:upcountto9_s0" File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 8
+Warning (10230): Verilog HDL assignment warning at cronometro_all.v(33): truncated value with size 32 to match size of target (4) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 33
+Info (12128): Elaborating entity "upcountto6" for hierarchy "cronometro:inst0|upcountto6:upcountto6_s1" File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 9
+Warning (10230): Verilog HDL assignment warning at cronometro_all.v(60): truncated value with size 32 to match size of target (4) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 60
+Info (12128): Elaborating entity "bin_to_segments" for hierarchy "bin_to_segments:inst1" File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 127
+Warning (10270): Verilog HDL Case Statement warning at bin_to_segments.v(13): incomplete case statement has no default case item File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (10240): Verilog HDL Always Construct warning at bin_to_segments.v(13): inferring latch(es) for variable "segments", which holds its previous value in one or more paths through the always construct File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Info (10041): Inferred latch for "segments[0]" at bin_to_segments.v(13) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Info (10041): Inferred latch for "segments[1]" at bin_to_segments.v(13) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Info (10041): Inferred latch for "segments[2]" at bin_to_segments.v(13) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Info (10041): Inferred latch for "segments[3]" at bin_to_segments.v(13) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Info (10041): Inferred latch for "segments[4]" at bin_to_segments.v(13) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Info (10041): Inferred latch for "segments[5]" at bin_to_segments.v(13) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Info (10041): Inferred latch for "segments[6]" at bin_to_segments.v(13) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Info (12128): Elaborating entity "segmentAssignment" for hierarchy "segmentAssignment:hoursinst" File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 174
+Warning (10230): Verilog HDL assignment warning at segmentAssignment.v(21): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/segmentAssignment.v Line: 21
+Warning (10230): Verilog HDL assignment warning at segmentAssignment.v(22): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/segmentAssignment.v Line: 22
+Warning (10230): Verilog HDL assignment warning at segmentAssignment.v(23): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/segmentAssignment.v Line: 23
+Warning (10230): Verilog HDL assignment warning at segmentAssignment.v(24): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/segmentAssignment.v Line: 24
+Warning (10230): Verilog HDL assignment warning at segmentAssignment.v(25): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/segmentAssignment.v Line: 25
+Warning (10230): Verilog HDL assignment warning at segmentAssignment.v(26): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/segmentAssignment.v Line: 26
+Warning (10230): Verilog HDL assignment warning at segmentAssignment.v(27): truncated value with size 32 to match size of target (1) File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/segmentAssignment.v Line: 27
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "hoursd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "mindecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mind[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "secdecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "hoursd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "mindecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mind[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "secdecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "hoursd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "mindecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mind[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "secdecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "hoursd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "mindecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mind[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "secdecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "hoursd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "mindecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mind[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "secdecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "hoursd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "mindecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mind[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "secdecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "hoursd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "hoursd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 91
+    Warning (12110): Net "mindecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mindecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 92
+    Warning (12110): Net "mind[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "mind[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 93
+    Warning (12110): Net "secdecd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secdecd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 94
+    Warning (12110): Net "secd[6]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[5]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+    Warning (12110): Net "secd[4]" is missing source, defaulting to GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 95
+Warning (12241): 12 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch bin_to_segments:inst5|segments[6] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto6_h|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst5|segments[5] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto6_h|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst5|segments[4] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto6_h|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst5|segments[3] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto6_h|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst5|segments[2] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto6_h|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst5|segments[1] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto6_h|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst5|segments[0] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto6_h|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst4|segments[6] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_m1|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst4|segments[5] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_m1|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst4|segments[4] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_m1|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst4|segments[3] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_m1|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst4|segments[2] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_m1|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst4|segments[1] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_m1|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst4|segments[0] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_m1|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst3|segments[6] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_m0|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst3|segments[5] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_m0|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst3|segments[4] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_m0|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst3|segments[3] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_m0|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst3|segments[2] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_m0|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst3|segments[1] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_m0|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst3|segments[0] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_m0|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst2|segments[6] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_s1|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst2|segments[5] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_s1|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst2|segments[4] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_s1|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst2|segments[3] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_s1|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst2|segments[2] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_s1|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst2|segments[1] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_s1|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst2|segments[0] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto6:upcountto6_s1|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 58
+Warning (13012): Latch bin_to_segments:inst1|segments[6] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_s0|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst1|segments[5] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_s0|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst1|segments[4] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_s0|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst1|segments[3] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_s0|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst1|segments[2] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_s0|Salida[2] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst1|segments[1] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_s0|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (13012): Latch bin_to_segments:inst1|segments[0] has unsafe behavior File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cronometro:inst0|upcountto9:upcountto9_s0|Salida[1] File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/cronometro_all.v Line: 31
+Warning (14026): LATCH primitive "bin_to_segments:inst4|segments[6]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst4|segments[5]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst4|segments[4]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst4|segments[3]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst4|segments[2]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst4|segments[1]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst4|segments[0]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst2|segments[6]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst2|segments[5]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst2|segments[4]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst2|segments[3]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst2|segments[2]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst2|segments[1]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (14026): LATCH primitive "bin_to_segments:inst2|segments[0]" is permanently enabled File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/bin_to_segments.v Line: 13
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "VGA_Ro[0]" is stuck at GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 7
+    Warning (13410): Pin "VGA_Ro[1]" is stuck at GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 7
+    Warning (13410): Pin "VGA_Ro[3]" is stuck at GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 7
+    Warning (13410): Pin "VGA_Go[0]" is stuck at GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 8
+    Warning (13410): Pin "VGA_Go[1]" is stuck at GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 8
+    Warning (13410): Pin "VGA_Go[2]" is stuck at GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 8
+    Warning (13410): Pin "VGA_Bo[0]" is stuck at GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 10
+    Warning (13410): Pin "VGA_Bo[1]" is stuck at GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 10
+    Warning (13410): Pin "VGA_Bo[2]" is stuck at GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 10
+    Warning (13410): Pin "VGA_Bo[3]" is stuck at GND File: C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/tpf.v Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/output_files/TPfinalelectro3.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 391 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 371 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 239 warnings
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Wed Nov 21 16:20:54 2018
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:47
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Matias/Desktop/tpelectro3final - copia - copia - skere/output_files/TPfinalelectro3.map.smsg.
+
+

@@ -1,0 +1,16 @@
+module clockdivider (
+input wire boardCLK,
+input wire [31:0] divider,
+output wire clk_out
+);
+
+always @(posedge CLK)
+begin
+	count <= count + 1;
+	if(count == divider)
+	begin
+		count<=0;
+		clk_out <= !clk_out;
+		end
+		end
+		

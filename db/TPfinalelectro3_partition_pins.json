@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "VGA_HS_O",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS_O",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Ro[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Ro[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Go[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Go[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Bo[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RST_BTN",
+					"strict" : false
+				},
+				{
+					"name" : "startstopbtn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
