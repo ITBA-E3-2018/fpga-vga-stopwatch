@@ -1,0 +1,100 @@
+$date
+	Mon Nov 19 21:12:33 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100us
+$end
+$scope module testbench_fsm $end
+$var wire 1 ! signal $end
+$var wire 1 " clk $end
+$var reg 1 # btn $end
+$var reg 513 $ dumpfile_path [512:0] $end
+$scope module clock0 $end
+$var reg 1 " clk $end
+$scope begin CLOCK_DRIVER $end
+$upscope $end
+$upscope $end
+$scope module fsm_boton0 $end
+$var wire 1 # btn $end
+$var wire 1 " clk $end
+$var reg 1 ! signal $end
+$var reg 1 % state $end
+$scope begin FSM $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+b1101111011101010111010001110000011101010111010000101110011101100110001101100100 $
+0#
+0"
+0!
+$end
+#2
+1"
+#3
+1#
+#4
+0"
+#6
+1!
+1"
+#7
+1%
+#8
+0"
+#10
+0!
+1"
+#12
+0"
+#13
+0#
+#14
+1"
+#15
+0%
+#16
+0"
+#18
+1"
+#20
+0"
+#22
+1"
+#23
+1#
+#24
+0"
+#26
+1!
+1"
+#27
+1%
+#28
+0"
+#30
+0!
+1"
+#32
+0"
+#33
+0#
+#34
+1"
+#35
+0%
+#36
+0"
+#38
+1"
+#40
+0"
+#42
+1"
+#43

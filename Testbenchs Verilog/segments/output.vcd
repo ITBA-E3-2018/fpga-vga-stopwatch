@@ -1,0 +1,81 @@
+$date
+	Tue Nov 20 04:17:22 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 7 ! segments [6:0] $end
+$var reg 4 " digit [3:0] $end
+$var reg 513 # dumpfile_path [512:0] $end
+$var reg 1 $ enable $end
+$scope module bin_to_segments0 $end
+$var wire 4 % digit [3:0] $end
+$var wire 1 $ enable $end
+$var reg 7 & segments [6:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111110 &
+bx %
+0$
+b1101111011101010111010001110000011101010111010000101110011101100110001101100100 #
+bx "
+b1111110 !
+$end
+#1
+1$
+#2
+b0 "
+b0 %
+#3
+b110000 !
+b110000 &
+b1 "
+b1 %
+#4
+b1101101 !
+b1101101 &
+b10 "
+b10 %
+#5
+b1111001 !
+b1111001 &
+b11 "
+b11 %
+#6
+b110011 !
+b110011 &
+b100 "
+b100 %
+#7
+b1011011 !
+b1011011 &
+b101 "
+b101 %
+#8
+b1011111 !
+b1011111 &
+b110 "
+b110 %
+#9
+b1110000 !
+b1110000 &
+b111 "
+b111 %
+#10
+b1111111 !
+b1111111 &
+b1000 "
+b1000 %
+#11
+b1111011 !
+b1111011 &
+b1001 "
+b1001 %
+#12
