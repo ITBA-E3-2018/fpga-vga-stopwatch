@@ -1,4 +1,4 @@
-# vga-stopwatch: An Altera Cyclone IV VGA stopwatch
+# fpga-vga-stopwatch: An Altera Cyclone IV VGA stopwatch
 
 The idea of this FPGA software designed for the Altera Cyclone IV board was to experiment with FPGA design. 
 
